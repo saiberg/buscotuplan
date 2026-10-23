@@ -1,0 +1,52 @@
+# Bloquea el acceso directo a archivos de configuración y base de datos
+<FilesMatch "^(config\.php|.*\.sql|.*\.log|.*\.md)$">
+    Require all denied
+</FilesMatch>
+
+# Sin listado de directorios
+Options -Indexes
+
+# La carpeta sql/ jamás debe servirse por HTTP (incluye el .sql de demo)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^sql/ - [F,L]
+</IfModule>
+
+# Cabeceras de seguridad
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Compresión (Apache)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+# Caché de estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css              "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/webp            "access plus 6 months"
+    ExpiresByType image/png             "access plus 6 months"
+    ExpiresByType image/svg+xml         "access plus 6 months"
+    ExpiresByType image/x-icon          "access plus 6 months"
+</IfModule>
+
+# Página por defecto
+DirectoryIndex index.html index.php
+
+# Forzar UTF-8
+AddDefaultCharset UTF-8
+
+# HTTP -> HTTPS en producción (descomentar al publicar)
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} !=on
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#     RewriteCond %{HTTP_HOST} ^buscotuplan\.cl [NC]
+#     RewriteRule ^(.*)$ https://www.buscotuplan.cl/$1 [R=301,L]
+# </IfModule>

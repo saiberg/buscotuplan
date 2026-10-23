@@ -1,0 +1,27 @@
+# BuscoTuPlan — entorno de desarrollo local
+#
+#   docker compose up -d --build
+#   Sitio:   http://localhost:8000
+#   Base:    MariaDB 10.2 del propio equipo (servicio Windows, puerto 3306)
+#
+# Para detener:   docker compose down
+# Para reiniciar: docker compose restart
+
+services:
+  web:
+    build: ./docker
+    container_name: buscotuplan-web
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      # Desde dentro del contenedor, el MySQL del equipo se ve así:
+      BTP_DB_HOST: host.docker.internal
+      BTP_DB_PORT: "3306"
+      BTP_DB_NAME: buscotuplan
+      BTP_DB_USER: buscotuplan
+      BTP_DB_PASS: btp_local_2026
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped

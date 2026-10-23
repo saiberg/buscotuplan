@@ -1,0 +1,15 @@
+# BuscoTuPlan — robots.txt
+# Los buscadores pueden indexar todo el sitio público, excepto las áreas
+# internas (panel, API, base de datos y configuración).
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /sql/
+Disallow: /lib/
+Disallow: /config.php
+Disallow: /assets/img/logoIm.png
+
+# Sitemap
+Sitemap: https://www.buscotuplan.cl/sitemap.xml
