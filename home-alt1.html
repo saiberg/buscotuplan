@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- BORRADOR: variante de diseño del home. noindex hasta que se elija. -->
+<title>Cotiza tu plan de Isapre y ahorra | Busco Tu Plan — asesoría gratuita</title>
+<meta name="description" content="Comparamos todos los planes de Isapre de Chile por ti. Cotización 100% gratis y sin compromiso: déjanos tus datos y un asesor te contacta por WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15241D">
+<link rel="canonical" href="https://www.buscotuplan.cl/">
+
+<!-- Favicons -->
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/touch-icon-180.png">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cl_CL">
+<meta property="og:site_name" content="Busco Tu Plan">
+<meta property="og:url" content="https://www.buscotuplan.cl/">
+<meta property="og:title" content="Cotiza tu plan de Isapre y ahorra — gratis y sin compromiso">
+<meta property="og:description" content="Comparamos todos los planes de Isapre por ti. Déjanos tus datos y te contactamos por WhatsApp en menos de 1 hora.">
+<meta property="og:image" content="https://www.buscotuplan.cl/assets/img/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cotiza tu plan de Isapre y ahorra — gratis y sin compromiso">
+<meta name="twitter:description" content="Comparamos todos los planes de Isapre por ti. Sin costo y sin compromiso.">
+<meta name="twitter:image" content="https://www.buscotuplan.cl/assets/img/logo.webp">
+
+<!-- Tipografías: Fraunces (titulares, editorial) + Inter (lectura) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600&display=swap">
+
+<link rel="stylesheet" href="assets/css/alt1.css?v=20261023b">
+
+<!-- Google Analytics 4: se carga solo si configuraste GA4_ID en ga.js -->
+<script src="assets/js/ga.js?v=20261020g" defer></script>
+
+<!-- Variante del CTA principal (?cta=wa) — igual que en el home actual -->
+<script>
+  try {
+    var btpCta = new URLSearchParams(location.search).get('cta') || sessionStorage.getItem('btp_cta') || '';
+    if (btpCta) { sessionStorage.setItem('btp_cta', btpCta); }
+    if (btpCta === 'wa') { document.documentElement.setAttribute('data-cta', 'wa'); }
+  } catch (e) { /* modo privado */ }
+</script>
+
+<!-- Datos estructurados: negocio + preguntas frecuentes -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Busco Tu Plan",
+  "url": "https://www.buscotuplan.cl/",
+  "logo": "https://www.buscotuplan.cl/assets/img/logo-icon.webp",
+  "image": "https://www.buscotuplan.cl/assets/img/logo.webp",
+  "description": "Asesoría independiente y gratuita para comparar y cambiar de plan de Isapre en Chile.",
+  "telephone": "+56979041612",
+  "priceRange": "Gratis",
+  "areaServed": { "@type": "Country", "name": "Chile" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Manquehue Norte 160",
+    "addressLocality": "Las Condes",
+    "addressRegion": "Santiago",
+    "addressCountry": "CL"
+  },
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿La cotización tiene algún costo?","acceptedAnswer":{"@type":"Answer","text":"No. Comparar planes y recibir asesoría es totalmente gratis y sin compromiso. Solo cotizamos: si no te convence nada, no pasa nada."}},
+    {"@type":"Question","name":"¿Tengo que cambiar de Isapre?","acceptedAnswer":{"@type":"Answer","text":"No es obligatorio. Podemos cotizar opciones dentro de tu misma Isapre para que conserves tu red de prestadores, o comparar otras instituciones si te interesa."}},
+    {"@type":"Question","name":"¿Tengo que ir a una sucursal?","acceptedAnswer":{"@type":"Answer","text":"No. Todo el proceso es online, por WhatsApp. Ni trámites en sucursal ni papeleo innecesario."}},
+    {"@type":"Question","name":"¿Qué datos me van a pedir?","acceptedAnswer":{"@type":"Answer","text":"Para empezar solo necesitamos tu nombre y teléfono. El RUN y la fecha de nacimiento se piden recién si decides concretar el cambio de plan, y siempre de forma segura."}},
+    {"@type":"Question","name":"¿Qué pasa con mis datos personales?","acceptedAnswer":{"@type":"Answer","text":"Se usan exclusivamente para contactarte y preparar tu cotización. No los vendemos ni los compartimos con terceros con fines comerciales."}},
+    {"@type":"Question","name":"¿Atienden fuera de Santiago?","acceptedAnswer":{"@type":"Answer","text":"Sí, atendemos a personas de todo Chile de forma online."}},
+    {"@type":"Question","name":"Ya tengo plan de Isapre, ¿me sirve?","acceptedAnswer":{"@type":"Answer","text":"Sí. Justamente así descubres si estás pagando de más o si hay un plan con mejores condiciones para tu caso."}}
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ================================================================ HEADER -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#inicio">
+      <img src="assets/img/logo-icon.webp" alt="" width="46" height="46" loading="eager">
+      <span class="brand-text">
+        <strong>Busco<span>Tu</span>Plan</strong>
+        <small>Comparamos el mejor de los planes</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-primary btn-sm" href="#cotizar">Cotizar gratis</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================================================================ HERO -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+      <p class="eyebrow">Asesoría independiente · Gratis · 100% online</p>
+
+      <h1>Compara tu plan de Isapre y <em>ahorra cada mes</em></h1>
+
+      <p class="lead">
+        Comparamos todos los planes de Chile según tu caso y te entregamos una
+        recomendación clara. Tú solo eliges — nosotros hacemos el trámite.
+      </p>
+
+      <ul class="check-list">
+        <li>Cotización <strong>100% gratis</strong> y sin compromiso</li>
+        <li><strong>Todas las Isapres</strong> comparadas, no solo una</li>
+        <li>Cambias de plan <strong>sin perder tu red</strong> de prestadores</li>
+        <li>Trámite <strong>100% online</strong>: sin filas ni sucursales</li>
+      </ul>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg cta-form" href="#cotizar">Quiero mi cotización gratis</a>
+        <a class="btn btn-wa btn-lg cta-wa" data-wa="Hola, quiero cotizar mi plan de Isapre. ¿Me pueden orientar?" data-wa-lugar="hero" href="https://wa.me/56979041612" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
+          <span class="cta-a">Escríbenos por WhatsApp</span>
+          <span class="cta-b">Escríbenos ahora y cotiza en minutos</span>
+        </a>
+        <p class="cta-wa-nota">Respondemos en minutos · Sin compromiso</p>
+      </div>
+
+      <p class="trust-line">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3m-1 13-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z"/></svg>
+        Tus datos se usan solo para contactarte. Nunca los vendemos.
+      </p>
+
+      <p class="hero-stats">
+        <span><strong>1 min</strong> para cotizar</span>
+        <span><strong>$0</strong> de costo</span>
+        <span><strong>7</strong> Isapres comparadas</span>
+      </p>
+    </div>
+
+    <!-- ------------------------------------------------------ FORMULARIO -->
+    <div class="hero-form" id="cotizar">
+      <div class="form-card">
+        <div class="form-card-head">
+          <h2>Cotiza gratis en 1 minuto</h2>
+          <p>Solo 3 datos. El resto lo hacemos nosotros.</p>
+        </div>
+
+        <form class="lead-form" id="form-hero" novalidate>
+          <!-- Trampa anti-bots: los humanos nunca la ven -->
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="ts" value="">
+          <input type="hidden" name="origen" value="landing">
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="landing_url" value="">
+
+          <div class="field">
+            <label for="f-nombre">Nombre <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-nombre" name="nombre" placeholder="Ej: María José"
+                   autocomplete="given-name" maxlength="120" required>
+            <p class="field-error" data-error-for="nombre" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-telefono">Teléfono <span aria-hidden="true">*</span></label>
+            <div class="phone-wrap">
+              <span class="phone-prefix" aria-hidden="true">🇨🇱 +56</span>
+              <input type="tel" id="f-telefono" name="telefono" placeholder="9 8765 4321"
+                     inputmode="numeric" autocomplete="tel-national" maxlength="14" required>
+            </div>
+            <p class="field-error" data-error-for="telefono" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-isapre">Isapre actual <span aria-hidden="true">*</span></label>
+            <div class="select-wrap">
+              <select id="f-isapre" name="isapre_actual" required>
+                <option value="">Selecciona tu Isapre</option>
+                <option>Colmena</option>
+                <option>Consalud</option>
+                <option>Banmédica</option>
+                <option>Cruz Blanca</option>
+                <option>Vida Tres</option>
+                <option>Fundación</option>
+                <option>Masculina</option>
+                <option>Particular</option>
+                <option>Mutualidad / FONASA</option>
+                <option>No tengo / No sé</option>
+              </select>
+            </div>
+            <p class="field-error" data-error-for="isapre_actual" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-necesidad">¿Qué necesitas? <span class="opt">(opcional)</span></label>
+            <div class="select-wrap">
+              <select id="f-necesidad" name="necesidad">
+                <option value="">Elige una opción</option>
+                <option>Ahorrar en mi plan actual</option>
+                <option>Cambiar de Isapre</option>
+                <option>Cotizar para mi familia</option>
+                <option>Agregar cargas (hijos o cónyuge)</option>
+                <option>No tengo plan todavía</option>
+                <option>No sé, necesito orientación</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" name="consent" value="1" required>
+            <span>Acepto que me contacten por WhatsApp, correo o teléfono sobre mi
+              cotización. He leído la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+          </label>
+          <p class="field-error" data-error-for="consent" role="alert"></p>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <span class="btn-label">Quiero mi cotización gratis</span>
+            <span class="btn-loading" aria-hidden="true">Enviando…</span>
+          </button>
+
+          <p class="form-micro">
+            <span>⏱ 1 minuto</span><span>💚 Gratis</span><span>🔒 Sin compromiso</span>
+          </p>
+          <p class="form-note">*El ahorro y los planes disponibles dependen de cada caso
+            y de las condiciones de cada Isapre.</p>
+        </form>
+
+        <!-- Éxito -->
+        <div class="form-success" id="success-hero" hidden>
+          <div class="success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+          </div>
+          <h3>¡Listo! Recibimos tus datos</h3>
+          <p class="success-msg">Te escribiremos por WhatsApp muy pronto con tu
+            comparación de planes. Mientras tanto, puedes continuar ya mismo:</p>
+          <a class="btn btn-wa btn-block btn-lg" data-wa-lugar="exito-hero" href="https://wa.me/56979041612" target="_blank" rel="noopener">
+            Continuar ahora por WhatsApp
+          </a>
+          <button type="button" class="link-btn" data-reset>Enviar otro formulario</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================ ISAPRES -->
+<section class="strip">
+  <div class="container">
+    <p class="strip-title">Cotizamos con todas las Isapres de Chile</p>
+    <ul class="chip-row">
+      <li>Colmena</li><li>Consalud</li><li>Banmédica</li><li>Cruz Blanca</li>
+      <li>Vida Tres</li><li>Fundación</li><li>Masculina</li><li>Mutualidades</li>
+    </ul>
+    <p class="strip-note">Servicio independiente de asesoría. No somos representantes
+      oficiales de ninguna Isapre.</p>
+  </div>
+</section>
+
+<!-- ================================================================ PROBLEMAS -->
+<section class="section" id="problemas">
+  <div class="container editorial">
+    <div class="editorial-head">
+      <p class="eyebrow">¿Te suena familiar?</p>
+      <h2>Por qué la mayoría paga de más por su plan</h2>
+      <p class="section-sub">Nadie te avisa cuando aparece una opción mejor para tu caso.
+        Por eso existe esto.</p>
+    </div>
+
+    <ol class="editorial-list">
+      <li>
+        <span class="ed-num" aria-hidden="true">01</span>
+        <div>
+          <h3>Pagas lo mismo hace años</h3>
+          <p>Las Isapres revisan precios todos los años y casi nadie revisa su propio
+            plan. El resultado: pagas más por lo mismo.</p>
+        </div>
+      </li>
+      <li>
+        <span class="ed-num" aria-hidden="true">02</span>
+        <div>
+          <h3>Las tablas son confusas</h3>
+          <p>Copagos, bonificaciones, red de prestadores, niveles… Comparar por tu
+            cuenta entre tantas Isapres es agotador.</p>
+        </div>
+      </li>
+      <li>
+        <span class="ed-num" aria-hidden="true">03</span>
+        <div>
+          <h3>Cambiar da lata</h3>
+          <p>Formularios, horas en sucursal y llamadas. Terminas dejándolo para
+            después… y sigues pagando lo mismo.</p>
+        </div>
+      </li>
+      <li>
+        <span class="ed-num" aria-hidden="true">04</span>
+        <div>
+          <h3>Vendedores, no asesores</h3>
+          <p>Te llaman para venderte su plan. Nadie se sienta a comparar qué es lo
+            mejor <em>para ti</em>.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================================================================ CÓMO FUNCIONA -->
+<section class="section section-alt" id="como-funciona">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Tres pasos y listo</h2>
+      <p class="section-sub">Sin papeleo, sin sucursales y sin perder la tarde.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">1</span>
+        <h3>Déjanos tus datos</h3>
+        <p>Toma menos de un minuto: nombre, teléfono y tu Isapre actual. Nada más.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <h3>Te escribimos por WhatsApp</h3>
+        <p>Un asesor real revisa tu caso, te explica las opciones y resuelve tus dudas.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <h3>Comparas y decides</h3>
+        <p>Ves opciones claras, eliges la que te convenga y nosotros hacemos el trámite.</p>
+      </li>
+    </ol>
+
+    <div class="mid-cta">
+      <a class="btn btn-primary btn-lg" href="#cotizar">Empezar ahora — es gratis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ BENEFICIOS -->
+<section class="section" id="beneficios">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Por qué con nosotros</p>
+      <h2>Comparamos de verdad, por ti y sin costo</h2>
+    </div>
+
+    <div class="benefits">
+      <article class="benefit">
+        <span class="benefit-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5.5"/></svg>
+        </span>
+        <h3>Gratis y sin compromiso</h3>
+        <p>Cotizar no te obliga a nada. Si no te convence, no cambias y no pagas un peso.</p>
+      </article>
+      <article class="benefit">
+        <span class="benefit-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 4 8l8 4 8-4-8-4Z"/><path d="m4 12 8 4 8-4"/><path d="m4 16 8 4 8-4"/></svg>
+        </span>
+        <h3>Todas las Isapres</h3>
+        <p>Comparamos el mercado completo para encontrar el plan que encaja con tu caso,
+          no el que nos conviene vender.</p>
+      </article>
+      <article class="benefit">
+        <span class="benefit-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v9Z"/></svg>
+        </span>
+        <h3>Asesor por WhatsApp</h3>
+        <p>Hablas con una persona que conoce el tema, no con un call center ni con un bot.</p>
+      </article>
+      <article class="benefit">
+        <span class="benefit-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a8 8 0 0 1 13.7-5.7L20 6"/><path d="M20 4v5h-5"/><path d="M20 15a8 8 0 0 1-13.7 5.7L4 18"/><path d="M4 20v-5h5"/></svg>
+        </span>
+        <h3>Cambias de plan, no de Isapre</h3>
+        <p>Si prefieres quedarte donde estás, buscamos opciones dentro de tu misma Isapre
+          para conservar tu red de prestadores.</p>
+      </article>
+      <article class="benefit">
+        <span class="benefit-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>
+        </span>
+        <h3>100% online</h3>
+        <p>Ni filas ni sucursales. Todo se resuelve desde el celular, cuando te acomode.</p>
+      </article>
+      <article class="benefit">
+        <span class="benefit-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.6-7 9-7 9Z"/></svg>
+        </span>
+        <h3>Te acompañamos después</h3>
+        <p>No desaparecemos tras el cambio: te avisamos de fechas clave y novedades de
+          tu plan.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ GUÍAS -->
+<section class="section section-alt" id="guias">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Guías prácticas</p>
+      <h2>Resuelve tu duda antes de decidir</h2>
+      <p class="section-sub">Contenido claro y sin letras chicas. Sin registro y sin compromiso.</p>
+    </div>
+
+    <div class="guias-list">
+      <a class="guia-row" href="guias/cambiar-de-isapre.html">
+        <span><strong>Cambiar de Isapre</strong><em>Cómo se hace, cuándo y qué revisar antes de firmar.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="guia-row" href="guias/fonasa-o-isapre.html">
+        <span><strong>Fonasa o Isapre</strong><em>Diferencias reales y cuál encaja mejor según tu caso.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="guia-row" href="guias/banmedica-vs-colmena.html">
+        <span><strong>Banmédica vs Colmena</strong><em>Cómo compararlas sin quedarte con la respuesta fácil.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="guia-row" href="guias/agregar-cargas.html">
+        <span><strong>Agregar cargas</strong><em>Cómo inscribir cónyuge o hijos, plazos y costos.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="guia-row" href="guias/cuanto-cuesta.html">
+        <span><strong>¿Cuánto cuesta cambiar?</strong><em>La respuesta corta: nada. La larga, en esta guía.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="guia-row" href="guias/bono-pad.html">
+        <span><strong>Bono PAD</strong><em>Qué es, quién lo puede usar y cómo se pide.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ FAQ -->
+<section class="section" id="preguntas">
+  <div class="container narrow">
+    <div class="section-head">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Resolvemos tus dudas</h2>
+    </div>
+
+    <div class="faq">
+      <details class="faq-item">
+        <summary>¿La cotización tiene algún costo?</summary>
+        <div class="faq-body"><p>No. Comparar planes y recibir asesoría es totalmente
+          gratis y sin compromiso. Solo cotizamos: si no te convence nada, no pasa nada.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que cambiar de Isapre?</summary>
+        <div class="faq-body"><p>No es obligatorio. Podemos cotizar opciones dentro de tu
+          misma Isapre para que conserves tu red de prestadores, o comparar otras
+          instituciones si te interesa.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que ir a una sucursal?</summary>
+        <div class="faq-body"><p>No. Todo el proceso es online, por WhatsApp. Ni trámites
+          en sucursal ni papeleo innecesario.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué datos me van a pedir?</summary>
+        <div class="faq-body"><p>Para empezar solo necesitamos tu nombre y teléfono. El RUN
+          y la fecha de nacimiento se piden recién si decides concretar el cambio de plan,
+          y siempre de forma segura.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa con mis datos personales?</summary>
+        <div class="faq-body"><p>Se usan exclusivamente para contactarte y preparar tu
+          cotización. No los vendemos ni los compartimos con terceros con fines comerciales.
+          Puedes pedir su eliminación cuando quieras escribiéndonos.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Atienden fuera de Santiago?</summary>
+        <div class="faq-body"><p>Sí, atendemos a personas de todo Chile de forma online.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Ya tengo plan de Isapre, ¿me sirve?</summary>
+        <div class="faq-body"><p>Sí. Justamente así descubres si estás pagando de más o si
+          hay un plan con mejores condiciones para tu caso.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ CTA FINAL -->
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div class="cta-copy">
+      <p class="eyebrow eyebrow-light">Último paso</p>
+      <h2>Deja de pagar de más por tu plan</h2>
+      <p>Completa el formulario en 1 minuto y te contactamos por WhatsApp con una
+        comparación clara de opciones para tu caso.</p>
+      <p class="cta-trust">Gratis · Sin compromiso · Asesoría independiente</p>
+    </div>
+
+    <form class="lead-form lead-form-mini" id="form-footer" novalidate>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="ts" value="">
+      <input type="hidden" name="origen" value="landing-footer">
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="utm_term" value="">
+      <input type="hidden" name="referrer" value="">
+      <input type="hidden" name="landing_url" value="">
+
+      <div class="mini-row">
+        <div class="field">
+          <label for="f2-nombre">Nombre <span aria-hidden="true">*</span></label>
+          <input type="text" id="f2-nombre" name="nombre" placeholder="Tu nombre"
+                 autocomplete="given-name" maxlength="120" required>
+        </div>
+        <div class="field">
+          <label for="f2-telefono">Teléfono <span aria-hidden="true">*</span></label>
+          <div class="phone-wrap">
+            <span class="phone-prefix" aria-hidden="true">🇨🇱 +56</span>
+            <input type="tel" id="f2-telefono" name="telefono" placeholder="9 8765 4321"
+                   inputmode="numeric" autocomplete="tel-national" maxlength="14" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f2-isapre">Isapre actual <span aria-hidden="true">*</span></label>
+          <div class="select-wrap">
+            <select id="f2-isapre" name="isapre_actual" required>
+              <option value="">Selecciona</option>
+              <option>Colmena</option><option>Consalud</option><option>Banmédica</option>
+              <option>Cruz Blanca</option><option>Vida Tres</option><option>Fundación</option>
+              <option>Masculina</option><option>Particular</option>
+              <option>Mutualidad / FONASA</option><option>No tengo / No sé</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <p class="field-error" data-error-for="nombre" role="alert"></p>
+      <p class="field-error" data-error-for="telefono" role="alert"></p>
+      <p class="field-error" data-error-for="isapre_actual" role="alert"></p>
+
+      <label class="check check-light">
+        <input type="checkbox" name="consent" value="1" required>
+        <span>Acepto que me contacten y he leído la
+          <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+      </label>
+      <p class="field-error" data-error-for="consent" role="alert"></p>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg">
+        <span class="btn-label">Quiero mi cotización gratis</span>
+        <span class="btn-loading" aria-hidden="true">Enviando…</span>
+      </button>
+    </form>
+
+    <div class="form-success form-success-light" id="success-footer" hidden>
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h3>¡Recibido! Te contactamos por WhatsApp muy pronto.</h3>
+      <a class="btn btn-wa btn-block" data-wa-lugar="exito-form" href="https://wa.me/56979041612" target="_blank" rel="noopener">
+        Continuar ahora por WhatsApp
+      </a>
+      <button type="button" class="link-btn link-btn-light" data-reset>Enviar otro formulario</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================================ FOOTER -->
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <img src="assets/img/logo-icon.webp" alt="Busco Tu Plan" width="64" height="64" loading="lazy">
+      <p><strong>Busco Tu Plan</strong><br>Comparamos el mejor de los planes de Isapre
+        para que tú solo elijas.</p>
+    </div>
+
+    <div class="foot-col">
+      <h3>Contacto</h3>
+      <ul>
+        <li>📍 Manquehue Norte 160, Las Condes, Santiago</li>
+        <li>📞 <a href="tel:+56979041612">+56 9 7904 1612</a></li>
+        <li>💬 <a href="https://wa.me/56979041612" target="_blank" rel="noopener"
+                 data-wa="Hola, quiero cotizar mi plan de Isapre." data-wa-lugar="pie">WhatsApp directo</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h3>Información</h3>
+      <ul>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        <li><a href="privacidad.html">Política de privacidad</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h3>Síguenos</h3>
+      <!-- Reemplaza # por la URL real de cada perfil -->
+      <div class="socials">
+        <a href="#" aria-label="YouTube" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8M10 15V9l5.2 3z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.6 5.8a4.8 4.8 0 0 1-1.1-2.3H12.6v11.3a2.6 2.6 0 1 1-1.8-2.5V9.9a5.5 5.5 0 1 0 4.6 5.4V9.6a7.7 7.7 0 0 0 4.2 1.3V7.7a4.7 4.7 0 0 1-3-1.9"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6A21 21 0 0 0 14.3 3.5c-2.4 0-4 1.45-4 4.13V9.9H7.6V13h2.7v8z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9s.68.82.9 1.38c.17.42.37 1.06.42 2.23.06 1.25.07 1.62.07 4.8s0 3.55-.07 4.8c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38s-.82.68-1.38.9c-.42.17-1.06.37-2.23.42-1.25.06-1.62.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.21 15.55 2.2 15.18 2.2 12s0-3.55.07-4.8c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38s.82-.68 1.38-.9c.42-.17 1.06-.37 2.23-.42C8.45 2.2 8.82 2.2 12 2.2m0 2.16c-3.14 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.17-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4-1.24-.06-1.6-.07-4.74-.07m0 3.67a5.97 5.97 0 1 1 0 11.94 5.97 5.97 0 0 1 0-11.94m0 2.16a3.81 3.81 0 1 0 0 7.62 3.81 3.81 0 0 0 0-7.62m6.24-3.9a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8"/></svg>
+        </a>
+      </div>
+      <p class="foot-note">Enlaces pendientes de configurar con las URLs reales.</p>
+    </div>
+  </div>
+
+  <div class="container foot-bottom">
+    <p>© <span id="year">2026</span> Busco Tu Plan · Santiago, Chile</p>
+    <p>Asesoría independiente en planes de salud. No afiliados ni representantes
+      oficiales de ninguna Isapre.</p>
+  </div>
+</footer>
+
+<!-- ================================================================ FAB WHATSAPP -->
+<a class="wa-fab" href="https://wa.me/56979041612" target="_blank" rel="noopener"
+   data-wa="Hola, quiero cotizar mi plan de Isapre." data-wa-lugar="fab" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<!-- ================================================================ ANALYTICS -->
+<!-- Pixel de Meta (Facebook) de tu hermana: mide visitas y conversiones. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1707293943768028');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1707293943768028&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fin Pixel de Meta -->
+
+<script src="assets/js/main.js?v=20261020g" defer></script>
+</body>
+</html>
