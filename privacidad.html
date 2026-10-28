@@ -2,55 +2,48 @@
 <html lang="es-CL">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Política de privacidad | Busco Tu Plan</title>
 <meta name="description" content="Cómo recogemos, usamos y protegemos tus datos personales en Busco Tu Plan.">
 <meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0E7A75">
 <link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/touch-icon-180.png">
+
+<!-- Tipografía: Plus Jakarta Sans (títulos) + Inter (texto) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=20261020g">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+
+<link rel="stylesheet" href="assets/css/styles.css?v=20261028c">
 <script src="assets/js/ga.js?v=20261020g" defer></script>
-<style>
-  .legal{ padding:clamp(36px,6vw,72px) 0 72px; }
-  .legal-card{
-    max-width:820px; margin-inline:auto;
-    background:#fff; border:1px solid var(--linea-2);
-    border-radius:24px; box-shadow:var(--sombra-2);
-    padding:clamp(24px,5vw,52px);
-  }
-  .legal-card h1{
-    font-family:var(--fuente-tit); font-size:clamp(1.6rem,4.6vw,2.3rem);
-    line-height:1.1; margin-bottom:.3em;
-  }
-  .legal-card h2{
-    font-family:var(--fuente); font-weight:800; font-size:1.08rem;
-    margin:2rem 0 .5em; color:var(--tinta);
-  }
-  .legal-card p, .legal-card li{ font-size:.97rem; color:var(--tinta-2); }
-  .legal-card ul{ list-style:disc; padding-left:1.3rem; display:grid; gap:.4rem; }
-  .legal-card .meta{
-    font-size:.82rem; color:var(--tinta-3); margin-top:2.4rem;
-    padding-top:1.2rem; border-top:1px dashed var(--linea);
-  }
-  .volver{ display:inline-flex; align-items:center; gap:.4em; font-weight:700; font-size:.9rem;
-    color:var(--verde-700); text-decoration:none; margin-bottom:1.4rem; }
-  .volver:hover{ text-decoration:underline; }
-</style>
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header" id="top">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <img src="assets/img/logo-icon.webp" alt="" width="52" height="52">
+      <svg class="brand-mark" viewBox="0 0 52 30" width="52" height="30" aria-hidden="true">
+        <circle cx="17" cy="15" r="11.5" fill="none" stroke="#0E7A75" stroke-width="5"/>
+        <circle cx="35" cy="15" r="11.5" fill="none" stroke="#1B2B4B" stroke-width="5"/>
+      </svg>
       <span class="brand-text">
-        <strong>Busco<span>Tu</span>Plan</strong>
+        <strong>Busco Tu Plan</strong>
         <small>Comparamos el mejor de los planes</small>
       </span>
     </a>
-    <a class="btn btn-primary btn-sm" href="index.html#cotizar">Cotizar gratis</a>
+
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html#como-funciona">Cómo funciona</a>
+      <a href="index.html#beneficios">Beneficios</a>
+      <a href="index.html#preguntas">Preguntas</a>
+      <a class="btn btn-primary btn-sm" href="index.html#cotizar">Cotizar gratis</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -103,10 +96,10 @@
         eliminación cuando quieras.</p>
 
       <h2>7. Herramientas de medición</h2>
-      <p>Utilizamos <strong>Meta Pixel</strong> (Facebook) para saber cuántas personas
-        visitan la página y cuántas completan el formulario. Esto nos permite mejorar el
-        sitio. Puedes desactivar estas mediciones desde la configuración de tu navegador o
-        desde las preferencias de anuncios de Facebook.</p>
+      <p>Utilizamos <strong>Meta Pixel</strong> (Facebook) y <strong>Google Analytics</strong>
+        para saber cuántas personas visitan la página y cuántas completan el formulario.
+        Esto nos permite mejorar el sitio. Puedes desactivar estas mediciones desde la
+        configuración de tu navegador o desde las preferencias de anuncios de Facebook.</p>
 
       <h2>8. Tus derechos (acceso, rectificación, cancelación y oposición)</h2>
       <p>Puedes solicitar en cualquier momento:</p>
@@ -138,11 +131,53 @@
 </main>
 
 <footer class="site-footer">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 52 30" width="52" height="30" aria-hidden="true">
+          <circle cx="17" cy="15" r="11.5" fill="none" stroke="#0E7A75" stroke-width="5"/>
+          <circle cx="35" cy="15" r="11.5" fill="none" stroke="#1B2B4B" stroke-width="5"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Busco Tu Plan</strong>
+        </span>
+      </a>
+      <p>Comparamos el mejor de los planes de Isapre para que tú solo elijas.</p>
+    </div>
+
+    <div class="foot-col">
+      <h3>Contacto</h3>
+      <ul>
+        <li>Manquehue Norte 160, Las Condes, Santiago</li>
+        <li><a href="tel:+56979041612">+56 9 7904 1612</a></li>
+        <li><a href="https://wa.me/56979041612" target="_blank" rel="noopener"
+                 data-wa="Hola, quiero cotizar mi plan de Isapre." data-wa-lugar="pie-privacidad">WhatsApp directo</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h3>Información</h3>
+      <ul>
+        <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+        <li><a href="index.html#beneficios">Beneficios</a></li>
+        <li><a href="index.html#preguntas">Preguntas frecuentes</a></li>
+        <li><a href="index.html#guias">Guías prácticas</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="container foot-bottom">
     <p>© <span id="year">2026</span> Busco Tu Plan · Santiago, Chile</p>
-    <p><a href="index.html" style="color:inherit">Volver a la página principal</a></p>
+    <p>Asesoría independiente en planes de salud. No afiliados ni representantes
+      oficiales de ninguna Isapre.</p>
   </div>
 </footer>
+
+<a class="wa-fab" href="https://wa.me/56979041612" target="_blank" rel="noopener"
+   data-wa="Hola, quiero cotizar mi plan de Isapre." data-wa-lugar="fab-privacidad" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
+  <span>WhatsApp</span>
+</a>
 
 <script src="assets/js/main.js?v=20261020g" defer></script>
 </body>

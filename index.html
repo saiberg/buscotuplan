@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+<!-- BuscoTuPlan — home principal (línea teal corporativa) -->
 <title>Cotiza tu plan de Isapre y ahorra | Busco Tu Plan — asesoría gratuita</title>
 <meta name="description" content="Comparamos todos los planes de Isapre de Chile por ti. Cotización 100% gratis y sin compromiso: déjanos tus datos y un asesor te contacta por WhatsApp.">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#16BD5B">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E7A75">
 <link rel="canonical" href="https://www.buscotuplan.cl/">
 
 <!-- Favicons -->
@@ -27,21 +28,18 @@
 <meta name="twitter:description" content="Comparamos todos los planes de Isapre por ti. Sin costo y sin compromiso.">
 <meta name="twitter:image" content="https://www.buscotuplan.cl/assets/img/logo.webp">
 
-<!-- Tipografías: Alfa Slab One (titulares, herencia de marca) + Inter (lectura) -->
+<!-- Tipografía: Plus Jakarta Sans (títulos) + Inter (texto) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=20261020g">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261028c">
 
 <!-- Google Analytics 4: se carga solo si configuraste GA4_ID en ga.js -->
 <script src="assets/js/ga.js?v=20261020g" defer></script>
 
-<!-- Variante del CTA principal.
-     Entrar con ?cta=wa muestra el botón de WhatsApp como acción principal
-     (lo usamos en las campañas de anuncios para medir qué convierte más).
-     Se guarda en la sesión para que la experiencia sea consistente. -->
+<!-- Variante del CTA principal (?cta=wa) — igual que en el home actual -->
 <script>
   try {
     var btpCta = new URLSearchParams(location.search).get('cta') || sessionStorage.getItem('btp_cta') || '';
@@ -50,7 +48,7 @@
   } catch (e) { /* modo privado */ }
 </script>
 
-<!-- Datos estructurados: negocio + preguntas frecuentes (mejora SEO y FAQ en Google) -->
+<!-- Datos estructurados: negocio + preguntas frecuentes -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,9 +94,13 @@
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a class="brand" href="#inicio">
-      <img src="assets/img/logo-icon.webp" alt="" width="52" height="52" loading="eager">
+      <!-- Logo de anillas (réplica del diseño de referencia; sustituible por el logo real) -->
+      <svg class="brand-mark" viewBox="0 0 52 30" width="52" height="30" aria-hidden="true">
+        <circle cx="17" cy="15" r="11.5" fill="none" stroke="#0E7A75" stroke-width="5"/>
+        <circle cx="35" cy="15" r="11.5" fill="none" stroke="#1B2B4B" stroke-width="5"/>
+      </svg>
       <span class="brand-text">
-        <strong>Busco<span>Tu</span>Plan</strong>
+        <strong>Busco Tu Plan</strong>
         <small>Comparamos el mejor de los planes</small>
       </span>
     </a>
@@ -123,52 +125,196 @@
   <div class="container hero-grid">
 
     <div class="hero-copy">
-      <p class="eyebrow">
-        <span class="dot"></span> Asesoría gratuita · Sin compromiso · 100% online
-      </p>
+      <p class="eyebrow">Asesoría en planes de salud</p>
 
-      <h1>Compara tu plan de Isapre y <span>ahorra cada mes</span></h1>
+      <h1>Tu plan de salud debería hacer <em>más por ti.</em></h1>
 
       <p class="lead">
-        Déjanos tus datos y un asesor personal te contacta por WhatsApp con una
-        comparación real de planes para tu caso. Nosotros hacemos el trámite por ti.
+        Comparamos todas las Isapre de Chile según tu caso y presupuesto, y te
+        entregamos una recomendación clara. Recibe asesoría gratuita, sin
+        compromiso y 100% online.
       </p>
 
-      <ul class="check-list">
-        <li>Cotización <strong>100% gratis</strong> y sin compromiso</li>
-        <li>Comparamos <strong>todas las Isapres</strong>, no solo una</li>
-        <li>Cambias de plan <strong>sin perder tu Isapre</strong> ni tu red de prestadores</li>
-        <li>Trámite <strong>100% online</strong>: sin filas ni sucursales</li>
-      </ul>
+      <div class="hero-feats">
+        <div class="feat">
+          <span class="ico-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          </span>
+          <span>
+            <strong>Comparamos todas las Isapres</strong>
+            <span>Revisamos todas las alternativas disponibles del mercado.</span>
+          </span>
+        </div>
+        <div class="feat">
+          <span class="ico-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <span>
+            <strong>Te asesoramos sin costo</strong>
+            <span>Servicio 100% gratuito y sin compromiso.</span>
+          </span>
+        </div>
+        <div class="feat">
+          <span class="ico-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
+          </span>
+          <span>
+            <strong>Todo por WhatsApp</strong>
+            <span>Rápido, fácil y directo, sin llamadas incómodas.</span>
+          </span>
+        </div>
+      </div>
 
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg cta-form" href="#cotizar">Quiero mi cotización gratis</a>
+        <a class="btn btn-primary btn-lg cta-form" href="#cotizar">
+          Comparar mi plan gratis
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
         <a class="btn btn-wa btn-lg cta-wa" data-wa="Hola, quiero cotizar mi plan de Isapre. ¿Me pueden orientar?" data-wa-lugar="hero" href="https://wa.me/56979041612" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
-          <span class="cta-a">Escríbenos por WhatsApp</span>
+          <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
+          <span class="cta-a">Hablar por WhatsApp</span>
           <span class="cta-b">Escríbenos ahora y cotiza en minutos</span>
         </a>
         <p class="cta-wa-nota">Respondemos en minutos · Sin compromiso</p>
       </div>
 
       <p class="trust-line">
-        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3m-1 13-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z"/></svg>
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3m-1 13-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z"/></svg>
         Tus datos se usan solo para contactarte. Nunca los vendemos.
       </p>
+    </div>
 
-      <p class="hero-stats" aria-hidden="false">
-        <span><strong>1 min</strong> para cotizar</span>
-        <span><strong>0</strong> costo</span>
-        <span><strong>Todas</strong> las Isapres</span>
+    <!-- Foto del hero (reemplazar por la foto real) -->
+    <figure class="hero-media" id="hero-media">
+      <img src="assets/img/hero-familia.webp?v=20261028a"
+           alt="Pareja comparando su plan de Isapre desde el computador"
+           width="1600" height="1023" fetchpriority="high"
+           onerror="document.getElementById('hero-media').classList.add('is-empty')">
+      <div class="hero-ph" aria-hidden="true">
+        <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="6">
+          <circle cx="46" cy="60" r="30"/>
+          <circle cx="74" cy="60" r="30"/>
+        </svg>
+      </div>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ================================================================ BANDA DE CONFIANZA -->
+<section class="trust-band">
+  <div class="container">
+    <ul class="trust-row">
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>
+          <strong>Asesoría independiente</strong>
+          <span>Tu bienestar es lo más importante, no vender un plan.</span>
+        </span>
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        <span>
+          <strong>Sin costo ni compromiso</strong>
+          <span>No pagas nada por nuestra asesoría.</span>
+        </span>
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>
+          <strong>Atención en todo Chile</strong>
+          <span>Donde estés, estamos para ayudarte.</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================================================================ CÓMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Así de fácil</p>
+      <h2>En 3 simples pasos</h2>
+      <p class="section-sub">Sin papeleo, sin sucursales y sin perder la tarde.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <span class="ico-circle ico-circle-outline" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h6"/><path d="M9 13h6M9 17h6"/></svg>
+        </span>
+        <span class="step-text">
+          <h3>Cuéntanos qué necesitas</h3>
+          <p>Completa un breve formulario con tu información y lo que buscas en
+            tu plan de salud. Toma menos de 1 minuto.</p>
+        </span>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <span class="ico-circle ico-circle-outline" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </span>
+        <span class="step-text">
+          <h3>Comparamos por ti</h3>
+          <p>Analizamos todas las Isapres y te mostramos las mejores opciones
+            según tu perfil, red de salud y presupuesto.</p>
+        </span>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <span class="ico-circle ico-circle-outline" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+        </span>
+        <span class="step-text">
+          <h3>Tú eliges con tranquilidad</h3>
+          <p>Te asesoramos en cada paso para que tomes la mejor decisión, sin
+            presión y a tu ritmo.</p>
+        </span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================================================================ FORMULARIO -->
+<section class="section section-alt" id="cotizar">
+  <div class="container cotiza-grid">
+
+    <div class="cotiza-copy">
+      <p class="eyebrow">Sin compromiso</p>
+      <h2>Cotiza tu comparación gratis</h2>
+      <p class="section-sub">Déjanos tus datos y un asesor real te escribe por
+        WhatsApp con las mejores opciones para tu caso. Sin costos, sin llamadas
+        incómodas y sin letra chica.</p>
+
+      <ul class="check-list">
+        <li>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Comparación de todas las Isapres según tu perfil
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Recomendación clara, sin tecnicismos
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Trámite 100% online, nosotros hacemos el papeleo
+        </li>
+      </ul>
+
+      <p class="trust-line">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3m-1 13-3-3 1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z"/></svg>
+        Servicio independiente. No somos representantes oficiales de ninguna Isapre.
       </p>
     </div>
 
     <!-- ------------------------------------------------------ FORMULARIO -->
-    <div class="hero-form" id="cotizar">
+    <div class="form-shell">
       <div class="form-card">
         <div class="form-card-head">
           <h2>Cotiza gratis en 1 minuto</h2>
-          <p>Solo 3 datos. El resto lo hacemos nosotros.</p>
+          <p>Solo 3 datos · El resto lo hacemos nosotros</p>
         </div>
 
         <form class="lead-form" id="form-hero" novalidate>
@@ -184,72 +330,78 @@
           <input type="hidden" name="referrer" value="">
           <input type="hidden" name="landing_url" value="">
 
-          <div class="field">
-            <label for="f-nombre">Nombre <span aria-hidden="true">*</span></label>
-            <input type="text" id="f-nombre" name="nombre" placeholder="Ej: María José"
-                   autocomplete="given-name" maxlength="120" required>
-            <p class="field-error" data-error-for="nombre" role="alert"></p>
-          </div>
-
-          <div class="field">
-            <label for="f-telefono">Teléfono <span aria-hidden="true">*</span></label>
-            <div class="phone-wrap">
-              <span class="phone-prefix" aria-hidden="true">🇨🇱 +56</span>
-              <input type="tel" id="f-telefono" name="telefono" placeholder="9 8765 4321"
-                     inputmode="numeric" autocomplete="tel-national" maxlength="14" required>
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-nombre">Nombre <span aria-hidden="true">*</span></label>
+              <input type="text" id="f-nombre" name="nombre" placeholder="Ej: María José"
+                     autocomplete="given-name" maxlength="120" required>
+              <p class="field-error" data-error-for="nombre" role="alert"></p>
             </div>
-            <p class="field-error" data-error-for="telefono" role="alert"></p>
-          </div>
 
-          <div class="field">
-            <label for="f-isapre">Isapre actual <span aria-hidden="true">*</span></label>
-            <div class="select-wrap">
-              <select id="f-isapre" name="isapre_actual" required>
-                <option value="">Selecciona tu Isapre</option>
-                <option>Colmena</option>
-                <option>Consalud</option>
-                <option>Banmédica</option>
-                <option>Cruz Blanca</option>
-                <option>Vida Tres</option>
-                <option>Fundación</option>
-                <option>Masculina</option>
-                <option>Particular</option>
-                <option>Mutualidad / FONASA</option>
-                <option>No tengo / No sé</option>
-              </select>
+            <div class="field">
+              <label for="f-telefono">Teléfono <span aria-hidden="true">*</span></label>
+              <div class="phone-wrap">
+                <span class="phone-prefix" aria-hidden="true">🇨🇱 +56</span>
+                <input type="tel" id="f-telefono" name="telefono" placeholder="9 8765 4321"
+                       inputmode="numeric" autocomplete="tel-national" maxlength="14" required>
+              </div>
+              <p class="field-error" data-error-for="telefono" role="alert"></p>
             </div>
-            <p class="field-error" data-error-for="isapre_actual" role="alert"></p>
-          </div>
 
-          <div class="field">
-            <label for="f-necesidad">¿Qué necesitas? <span class="opt">(opcional)</span></label>
-            <div class="select-wrap">
-              <select id="f-necesidad" name="necesidad">
-                <option value="">Elige una opción</option>
-                <option>Ahorrar en mi plan actual</option>
-                <option>Cambiar de Isapre</option>
-                <option>Cotizar para mi familia</option>
-                <option>Agregar cargas (hijos o cónyuge)</option>
-                <option>No tengo plan todavía</option>
-                <option>No sé, necesito orientación</option>
-              </select>
+            <div class="field field-full">
+              <label for="f-isapre">Isapre actual <span aria-hidden="true">*</span></label>
+              <div class="select-wrap">
+                <select id="f-isapre" name="isapre_actual" required>
+                  <option value="">Selecciona tu Isapre</option>
+                  <option>Colmena</option>
+                  <option>Consalud</option>
+                  <option>Banmédica</option>
+                  <option>Cruz Blanca</option>
+                  <option>Vida Tres</option>
+                  <option>Fundación</option>
+                  <option>Masculina</option>
+                  <option>Particular</option>
+                  <option>Mutualidad / FONASA</option>
+                  <option>No tengo / No sé</option>
+                </select>
+              </div>
+              <p class="field-error" data-error-for="isapre_actual" role="alert"></p>
+            </div>
+
+            <div class="field field-full">
+              <label for="f-necesidad">¿Qué necesitas? <span class="opt">(opcional)</span></label>
+              <div class="select-wrap">
+                <select id="f-necesidad" name="necesidad">
+                  <option value="">Elige una opción</option>
+                  <option>Ahorrar en mi plan actual</option>
+                  <option>Cambiar de Isapre</option>
+                  <option>Cotizar para mi familia</option>
+                  <option>Agregar cargas (hijos o cónyuge)</option>
+                  <option>No tengo plan todavía</option>
+                  <option>No sé, necesito orientación</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <label class="check">
-            <input type="checkbox" name="consent" value="1" required>
-            <span>Acepto que me contacten por WhatsApp, correo o teléfono sobre mi
-              cotización. He leído la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
-          </label>
-          <p class="field-error" data-error-for="consent" role="alert"></p>
+          <div class="form-actions">
+            <div class="consent-block">
+              <label class="check">
+                <input type="checkbox" name="consent" value="1" required>
+                <span>Acepto que me contacten por WhatsApp, correo o teléfono sobre mi
+                  cotización. He leído la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+              </label>
+              <p class="field-error" data-error-for="consent" role="alert"></p>
+            </div>
 
-          <button type="submit" class="btn btn-primary btn-block btn-lg">
-            <span class="btn-label">Quiero mi cotización gratis</span>
-            <span class="btn-loading" aria-hidden="true">Enviando…</span>
-          </button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+              <span class="btn-label">Quiero mi cotización gratis</span>
+              <span class="btn-loading" aria-hidden="true">Enviando…</span>
+            </button>
+          </div>
 
           <p class="form-micro">
-            <span>⏱ 1 minuto</span><span>💚 Gratis</span><span>🔒 Sin compromiso</span>
+            <span>1 minuto</span><span>Gratis</span><span>Sin compromiso</span>
           </p>
           <p class="form-note">*El ahorro y los planes disponibles dependen de cada caso
             y de las condiciones de cada Isapre.</p>
@@ -258,12 +410,13 @@
         <!-- Éxito -->
         <div class="form-success" id="success-hero" hidden>
           <div class="success-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="34" height="34"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
           </div>
           <h3>¡Listo! Recibimos tus datos</h3>
           <p class="success-msg">Te escribiremos por WhatsApp muy pronto con tu
             comparación de planes. Mientras tanto, puedes continuar ya mismo:</p>
           <a class="btn btn-wa btn-block btn-lg" data-wa-lugar="exito-hero" href="https://wa.me/56979041612" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
             Continuar ahora por WhatsApp
           </a>
           <button type="button" class="link-btn" data-reset>Enviar otro formulario</button>
@@ -274,169 +427,107 @@
   </div>
 </section>
 
-<!-- ================================================================ ISAPRES -->
-<section class="strip">
-  <div class="container">
-    <p class="strip-title">Cotizamos con todas las Isapres de Chile</p>
-    <ul class="chip-row">
-      <li>Colmena</li><li>Consalud</li><li>Banmédica</li><li>Cruz Blanca</li>
-      <li>Vida Tres</li><li>Fundación</li><li>Masculina</li><li>Mutualidades</li>
-    </ul>
-    <p class="strip-note">Servicio independiente de asesoría. No somos representantes
-      oficiales de ninguna Isapre.</p>
-  </div>
-</section>
-
 <!-- ================================================================ PROBLEMAS -->
 <section class="section" id="problemas">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow"><span class="dot"></span> ¿Te suena familiar?</p>
+      <p class="eyebrow">¿Te suena familiar?</p>
       <h2>Por qué la mayoría paga de más por su plan</h2>
       <p class="section-sub">Nadie te avisa cuando aparece una opción mejor para tu caso.
         Por eso existe esto.</p>
     </div>
 
-    <div class="card-grid four">
+    <div class="grid-4">
       <article class="card">
-        <div class="card-ico" aria-hidden="true">💸</div>
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
+        </span>
         <h3>Pagas lo mismo hace años</h3>
-        <p>Las Isapres revisan precios todos los años y casi nadie revisa su propio plan.
-          El resultado: pagas más por lo mismo.</p>
+        <p>Las Isapres revisan precios todos los años y casi nadie revisa su propio
+          plan. El resultado: pagas más por lo mismo.</p>
       </article>
       <article class="card">
-        <div class="card-ico" aria-hidden="true">🗂️</div>
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2.5-3 4"/><path d="M12 17h.01"/></svg>
+        </span>
         <h3>Las tablas son confusas</h3>
-        <p>Copagos, bonificaciones, red de prestadores, niveles… Comparar por tu cuenta
-          entre tantas Isapres es agotador.</p>
+        <p>Copagos, bonificaciones, red de prestadores, niveles… Comparar por tu
+          cuenta entre tantas Isapres es agotador.</p>
       </article>
       <article class="card">
-        <div class="card-ico" aria-hidden="true">🕐</div>
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </span>
         <h3>Cambiar da lata</h3>
-        <p>Formularios, horas en sucursal y llamadas. Terminas dejándolo para después…
-          y sigues pagando lo mismo.</p>
+        <p>Formularios, horas en sucursal y llamadas. Terminas dejándolo para
+          después… y sigues pagando lo mismo.</p>
       </article>
       <article class="card">
-        <div class="card-ico" aria-hidden="true">🎯</div>
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
         <h3>Vendedores, no asesores</h3>
-        <p>Te llaman para venderte su plan. Nadie se sienta a comparar qué es lo mejor
-          <em>para ti</em>.</p>
+        <p>Te llaman para venderte su plan. Nadie se sienta a comparar qué es lo
+          mejor <em>para ti</em>.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================ CÓMO FUNCIONA -->
-<section class="section section-alt" id="como-funciona">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow"><span class="dot"></span> Cómo funciona</p>
-      <h2>3 pasos y listo</h2>
-      <p class="section-sub">Sin papeleo, sin sucursales y sin perder la tarde.</p>
-    </div>
-
-    <ol class="steps">
-      <li class="step">
-        <span class="step-num">1</span>
-        <h3>Déjanos tus datos</h3>
-        <p>Toma menos de un minuto: nombre, teléfono y tu Isapre actual. Nada más.</p>
-      </li>
-      <li class="step">
-        <span class="step-num">2</span>
-        <h3>Te escribimos por WhatsApp</h3>
-        <p>Un asesor real revisa tu caso, te explica las opciones y resuelve tus dudas.</p>
-      </li>
-      <li class="step">
-        <span class="step-num">3</span>
-        <h3>Comparas y decides</h3>
-        <p>Ves opciones claras, eliges la que te convenga y nosotros hacemos el trámite.</p>
-      </li>
-    </ol>
-
-    <div class="mid-cta">
-      <a class="btn btn-primary btn-lg" href="#cotizar">Empezar ahora — es gratis</a>
     </div>
   </div>
 </section>
 
 <!-- ================================================================ BENEFICIOS -->
-<section class="section" id="beneficios">
+<section class="section section-alt" id="beneficios">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow"><span class="dot"></span> ¿Por qué con nosotros?</p>
+      <p class="eyebrow">Por qué con nosotros</p>
       <h2>Comparamos de verdad, por ti y sin costo</h2>
     </div>
 
-    <div class="card-grid three">
-      <article class="card card-line">
-        <div class="card-ico" aria-hidden="true">✅</div>
+    <div class="benefits">
+      <article class="card">
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M12 8a4 4 0 0 0-8 0M12 8a4 4 0 0 1 8 0"/></svg>
+        </span>
         <h3>Gratis y sin compromiso</h3>
         <p>Cotizar no te obliga a nada. Si no te convence, no cambias y no pagas un peso.</p>
       </article>
-      <article class="card card-line">
-        <div class="card-ico" aria-hidden="true">⚖️</div>
+      <article class="card">
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+        </span>
         <h3>Todas las Isapres</h3>
         <p>Comparamos el mercado completo para encontrar el plan que encaja con tu caso,
           no el que nos conviene vender.</p>
       </article>
-      <article class="card card-line">
-        <div class="card-ico" aria-hidden="true">💬</div>
+      <article class="card">
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l2-4.9A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+        </span>
         <h3>Asesor por WhatsApp</h3>
         <p>Hablas con una persona que conoce el tema, no con un call center ni con un bot.</p>
       </article>
-      <article class="card card-line">
-        <div class="card-ico" aria-hidden="true">🔄</div>
+      <article class="card">
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+        </span>
         <h3>Cambias de plan, no de Isapre</h3>
         <p>Si prefieres quedarte donde estás, buscamos opciones dentro de tu misma Isapre
           para conservar tu red de prestadores.</p>
       </article>
-      <article class="card card-line">
-        <div class="card-ico" aria-hidden="true">📱</div>
+      <article class="card">
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        </span>
         <h3>100% online</h3>
         <p>Ni filas ni sucursales. Todo se resuelve desde el celular, cuando te acomode.</p>
       </article>
-      <article class="card card-line">
-        <div class="card-ico" aria-hidden="true">🤝</div>
+      <article class="card">
+        <span class="ico-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </span>
         <h3>Te acompañamos después</h3>
-        <p>No desaparecemos tras el cambio: te avisamos de fechas clave y novedades de tu plan.</p>
+        <p>No desaparecemos tras el cambio: te avisamos de fechas clave y novedades de
+          tu plan.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================ TESTIMONIOS -->
-<section class="section section-alt" id="testimonios">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow"><span class="dot"></span> Clientes</p>
-      <h2>Gente que ya cambió su plan</h2>
-      <!-- ================================================================
-           PENDIENTE: reemplazar por testimonios REALES de clientes (nombre,
-           comuna o foto si autorizan). Si aún no tienes, elimina toda esta
-           sección: un testimonio inventado daña la confianza y puede infringir
-           la publicidad vigente.
-           ================================================================ -->
-    </div>
-
-    <div class="card-grid three">
-      <figure class="testi">
-        <blockquote>“Llené el formulario en la mañana y a media tarde ya tenía
-          comparadas tres opciones. Cambié de plan sin moverme de la casa.”</blockquote>
-        <figcaption><strong>[Nombre del cliente]</strong><span>[Comuna] · Isapre [X]</span></figcaption>
-        <p class="testi-flag">Testimonio de ejemplo — reemplazar con uno real</p>
-      </figure>
-      <figure class="testi">
-        <blockquote>“Pensé que era un trámite eterno y fue todo por WhatsApp. Ahora
-          pago menos por un plan con mejor bonificación.”</blockquote>
-        <figcaption><strong>[Nombre del cliente]</strong><span>[Comuna] · Isapre [X]</span></figcaption>
-        <p class="testi-flag">Testimonio de ejemplo — reemplazar con uno real</p>
-      </figure>
-      <figure class="testi">
-        <blockquote>“Lo que más me gustó fue que me explicaron las diferencias sin
-          apurarme a firmar nada.”</blockquote>
-        <figcaption><strong>[Nombre del cliente]</strong><span>[Comuna] · Isapre [X]</span></figcaption>
-        <p class="testi-flag">Testimonio de ejemplo — reemplazar con uno real</p>
-      </figure>
     </div>
   </div>
 </section>
@@ -445,46 +536,51 @@
 <section class="section" id="guias">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow"><span class="dot"></span> Guías prácticas</p>
+      <p class="eyebrow">Guías prácticas</p>
       <h2>Resuelve tu duda antes de decidir</h2>
-      <p class="section-lead">Contenido claro y sin letras chicas sobre las preguntas
-        que más nos hacen. Sin registro y sin compromiso.</p>
+      <p class="section-sub">Contenido claro y sin letras chicas. Sin registro y sin compromiso.</p>
     </div>
 
-    <div class="tarjetas-guias g3">
-      <a class="tarjeta-guia" href="guias/cambiar-de-isapre.html">
-        <strong>Cambiar de Isapre</strong>
-        <span>Cómo se hace, cuándo y qué revisar antes de firmar.</span>
+    <div class="guias-list">
+      <a class="guia-row" href="guias/cambiar-de-isapre.html">
+        <span class="guia-idx" aria-hidden="true">01</span>
+        <span><strong>Cambiar de Isapre</strong><em>Cómo se hace, cuándo y qué revisar antes de firmar.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="tarjeta-guia" href="guias/fonasa-o-isapre.html">
-        <strong>Fonasa o Isapre</strong>
-        <span>Diferencias reales y cuál encaja mejor según tu caso.</span>
+      <a class="guia-row" href="guias/fonasa-o-isapre.html">
+        <span class="guia-idx" aria-hidden="true">02</span>
+        <span><strong>Fonasa o Isapre</strong><em>Diferencias reales y cuál encaja mejor según tu caso.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="tarjeta-guia" href="guias/banmedica-vs-colmena.html">
-        <strong>Banmédica vs Colmena</strong>
-        <span>Cómo compararlas sin quedarte con la respuesta fácil.</span>
+      <a class="guia-row" href="guias/banmedica-vs-colmena.html">
+        <span class="guia-idx" aria-hidden="true">03</span>
+        <span><strong>Banmédica vs Colmena</strong><em>Cómo compararlas sin quedarte con la respuesta fácil.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="tarjeta-guia" href="guias/agregar-cargas.html">
-        <strong>Agregar cargas</strong>
-        <span>Cómo inscribir cónyuge o hijos, plazos y costos.</span>
+      <a class="guia-row" href="guias/agregar-cargas.html">
+        <span class="guia-idx" aria-hidden="true">04</span>
+        <span><strong>Agregar cargas</strong><em>Cómo inscribir cónyuge o hijos, plazos y costos.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="tarjeta-guia" href="guias/cuanto-cuesta.html">
-        <strong>¿Cuánto cuesta cambiar?</strong>
-        <span>La respuesta corta: nada. La larga, en esta guía.</span>
+      <a class="guia-row" href="guias/cuanto-cuesta.html">
+        <span class="guia-idx" aria-hidden="true">05</span>
+        <span><strong>¿Cuánto cuesta cambiar?</strong><em>La respuesta corta: nada. La larga, en esta guía.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="tarjeta-guia" href="guias/bono-pad.html">
-        <strong>Bono PAD</strong>
-        <span>Qué es, quién lo puede usar y cómo se pide.</span>
+      <a class="guia-row" href="guias/bono-pad.html">
+        <span class="guia-idx" aria-hidden="true">06</span>
+        <span><strong>Bono PAD</strong><em>Qué es, quién lo puede usar y cómo se pide.</em></span>
+        <span class="guia-arrow" aria-hidden="true">→</span>
       </a>
     </div>
   </div>
 </section>
 
 <!-- ================================================================ FAQ -->
-<section class="section" id="preguntas">
+<section class="section section-alt" id="preguntas">
   <div class="container narrow">
     <div class="section-head">
-      <p class="eyebrow"><span class="dot"></span> Preguntas frecuentes</p>
+      <p class="eyebrow">Preguntas frecuentes</p>
       <h2>Resolvemos tus dudas</h2>
     </div>
 
@@ -534,75 +630,91 @@
 <section class="cta-band">
   <div class="container cta-inner">
     <div class="cta-copy">
+      <p class="eyebrow eyebrow-light">Último paso</p>
       <h2>Deja de pagar de más por tu plan</h2>
       <p>Completa el formulario en 1 minuto y te contactamos por WhatsApp con una
         comparación clara de opciones para tu caso.</p>
+      <p class="cta-trust">Gratis · Sin compromiso · Asesoría independiente</p>
     </div>
 
-    <form class="lead-form lead-form-mini" id="form-footer" novalidate>
-      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <input type="hidden" name="ts" value="">
-      <input type="hidden" name="origen" value="landing-footer">
-      <input type="hidden" name="utm_source" value="">
-      <input type="hidden" name="utm_medium" value="">
-      <input type="hidden" name="utm_campaign" value="">
-      <input type="hidden" name="utm_content" value="">
-      <input type="hidden" name="utm_term" value="">
-      <input type="hidden" name="referrer" value="">
-      <input type="hidden" name="landing_url" value="">
-
-      <div class="mini-row">
-        <div class="field">
-          <label for="f2-nombre">Nombre <span aria-hidden="true">*</span></label>
-          <input type="text" id="f2-nombre" name="nombre" placeholder="Tu nombre"
-                 autocomplete="given-name" maxlength="120" required>
-        </div>
-        <div class="field">
-          <label for="f2-telefono">Teléfono <span aria-hidden="true">*</span></label>
-          <div class="phone-wrap">
-            <span class="phone-prefix" aria-hidden="true">🇨🇱 +56</span>
-            <input type="tel" id="f2-telefono" name="telefono" placeholder="9 8765 4321"
-                   inputmode="numeric" autocomplete="tel-national" maxlength="14" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="f2-isapre">Isapre actual <span aria-hidden="true">*</span></label>
-          <div class="select-wrap">
-            <select id="f2-isapre" name="isapre_actual" required>
-              <option value="">Selecciona</option>
-              <option>Colmena</option><option>Consalud</option><option>Banmédica</option>
-              <option>Cruz Blanca</option><option>Vida Tres</option><option>Fundación</option>
-              <option>Masculina</option><option>Particular</option>
-              <option>Mutualidad / FONASA</option><option>No tengo / No sé</option>
-            </select>
-          </div>
-        </div>
+    <div class="cta-card">
+      <div class="form-card-head">
+        <h2>Cotiza gratis en 1 minuto</h2>
+        <p>Solo 3 datos · El resto lo hacemos nosotros</p>
       </div>
 
-      <p class="field-error" data-error-for="nombre" role="alert"></p>
-      <p class="field-error" data-error-for="telefono" role="alert"></p>
-      <p class="field-error" data-error-for="isapre_actual" role="alert"></p>
+      <form class="lead-form lead-form-mini" id="form-footer" novalidate>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="ts" value="">
+        <input type="hidden" name="origen" value="landing-footer">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="referrer" value="">
+        <input type="hidden" name="landing_url" value="">
 
-      <label class="check check-light">
-        <input type="checkbox" name="consent" value="1" required>
-        <span>Acepto que me contacten y he leído la
-          <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
-      </label>
-      <p class="field-error" data-error-for="consent" role="alert"></p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f2-nombre">Nombre <span aria-hidden="true">*</span></label>
+            <input type="text" id="f2-nombre" name="nombre" placeholder="Tu nombre"
+                   autocomplete="given-name" maxlength="120" required>
+            <p class="field-error" data-error-for="nombre" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="f2-telefono">Teléfono <span aria-hidden="true">*</span></label>
+            <div class="phone-wrap">
+              <span class="phone-prefix" aria-hidden="true">🇨🇱 +56</span>
+              <input type="tel" id="f2-telefono" name="telefono" placeholder="9 8765 4321"
+                     inputmode="numeric" autocomplete="tel-national" maxlength="14" required>
+            </div>
+            <p class="field-error" data-error-for="telefono" role="alert"></p>
+          </div>
+          <div class="field field-full">
+            <label for="f2-isapre">Isapre actual <span aria-hidden="true">*</span></label>
+            <div class="select-wrap">
+              <select id="f2-isapre" name="isapre_actual" required>
+                <option value="">Selecciona tu Isapre</option>
+                <option>Colmena</option><option>Consalud</option><option>Banmédica</option>
+                <option>Cruz Blanca</option><option>Vida Tres</option><option>Fundación</option>
+                <option>Masculina</option><option>Particular</option>
+                <option>Mutualidad / FONASA</option><option>No tengo / No sé</option>
+              </select>
+            </div>
+            <p class="field-error" data-error-for="isapre_actual" role="alert"></p>
+          </div>
+        </div>
 
-      <button type="submit" class="btn btn-dark btn-block btn-lg">
-        <span class="btn-label">Quiero mi cotización gratis</span>
-        <span class="btn-loading" aria-hidden="true">Enviando…</span>
-      </button>
-    </form>
+        <div class="form-actions">
+          <div class="consent-block">
+            <label class="check">
+              <input type="checkbox" name="consent" value="1" required>
+              <span>Acepto que me contacten y he leído la
+                <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+            </label>
+            <p class="field-error" data-error-for="consent" role="alert"></p>
+          </div>
 
-    <div class="form-success form-success-light" id="success-footer" hidden>
-      <div class="success-icon" aria-hidden="true">✓</div>
-      <h3>¡Recibido! Te contactamos por WhatsApp muy pronto.</h3>
-      <a class="btn btn-wa btn-block" data-wa-lugar="exito-form" href="https://wa.me/56979041612" target="_blank" rel="noopener">
-        Continuar ahora por WhatsApp
-      </a>
-      <button type="button" class="link-btn link-btn-light" data-reset>Enviar otro formulario</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            <span class="btn-label">Quiero mi cotización gratis</span>
+            <span class="btn-loading" aria-hidden="true">Enviando…</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Éxito -->
+      <div class="form-success" id="success-footer" hidden>
+        <div class="success-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3>¡Recibido! Te contactamos por WhatsApp muy pronto.</h3>
+        <a class="btn btn-wa btn-block" data-wa-lugar="exito-form" href="https://wa.me/56979041612" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
+          Continuar ahora por WhatsApp
+        </a>
+        <button type="button" class="link-btn" data-reset>Enviar otro formulario</button>
+      </div>
     </div>
   </div>
 </section>
@@ -613,9 +725,16 @@
 <footer class="site-footer">
   <div class="container foot-grid">
     <div class="foot-brand">
-      <img src="assets/img/logo-icon.webp" alt="Busco Tu Plan" width="72" height="72" loading="lazy">
-      <p><strong>Busco Tu Plan</strong><br>Comparamos el mejor de los planes de Isapre
-        para que tú solo elijas.</p>
+      <a class="brand" href="#inicio">
+        <svg class="brand-mark" viewBox="0 0 52 30" width="52" height="30" aria-hidden="true">
+          <circle cx="17" cy="15" r="11.5" fill="none" stroke="#0E7A75" stroke-width="5"/>
+          <circle cx="35" cy="15" r="11.5" fill="none" stroke="#1B2B4B" stroke-width="5"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Busco Tu Plan</strong>
+        </span>
+      </a>
+      <p>Comparamos el mejor de los planes de Isapre para que tú solo elijas.</p>
     </div>
 
     <div class="foot-col">
@@ -643,16 +762,16 @@
       <!-- Reemplaza # por la URL real de cada perfil -->
       <div class="socials">
         <a href="#" aria-label="YouTube" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8M10 15V9l5.2 3z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8M10 15V9l5.2 3z"/></svg>
         </a>
         <a href="#" aria-label="TikTok" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.6 5.8a4.8 4.8 0 0 1-1.1-2.3H12.6v11.3a2.6 2.6 0 1 1-1.8-2.5V9.9a5.5 5.5 0 1 0 4.6 5.4V9.6a7.7 7.7 0 0 0 4.2 1.3V7.7a4.7 4.7 0 0 1-3-1.9"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.6 5.8a4.8 4.8 0 0 1-1.1-2.3H12.6v11.3a2.6 2.6 0 1 1-1.8-2.5V9.9a5.5 5.5 0 1 0 4.6 5.4V9.6a7.7 7.7 0 0 0 4.2 1.3V7.7a4.7 4.7 0 0 1-3-1.9"/></svg>
         </a>
         <a href="#" aria-label="Facebook" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6A21 21 0 0 0 14.3 3.5c-2.4 0-4 1.45-4 4.13V9.9H7.6V13h2.7v8z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6A21 21 0 0 0 14.3 3.5c-2.4 0-4 1.45-4 4.13V9.9H7.6V13h2.7v8z"/></svg>
         </a>
         <a href="#" aria-label="Instagram" rel="noopener">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9s.68.82.9 1.38c.17.42.37 1.06.42 2.23.06 1.25.07 1.62.07 4.8s0 3.55-.07 4.8c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38s-.82.68-1.38.9c-.42.17-1.06.37-2.23.42-1.25.06-1.62.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.21 15.55 2.2 15.18 2.2 12s0-3.55.07-4.8c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38s.82-.68 1.38-.9c.42-.17 1.06-.37 2.23-.42C8.45 2.2 8.82 2.2 12 2.2m0 2.16c-3.14 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.17-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4-1.24-.06-1.6-.07-4.74-.07m0 3.67a5.97 5.97 0 1 1 0 11.94 5.97 5.97 0 0 1 0-11.94m0 2.16a3.81 3.81 0 1 0 0 7.62 3.81 3.81 0 0 0 0-7.62m6.24-3.9a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9s.68.82.9 1.38c.17.42.37 1.06.42 2.23.06 1.25.07 1.62.07 4.8s0 3.55-.07 4.8c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38s-.82.68-1.38.9c-.42.17-1.06.37-2.23.42-1.25.06-1.62.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.21 15.55 2.2 15.18 2.2 12s0-3.55.07-4.8c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38s.82-.68 1.38-.9c.42-.17 1.06-.37 2.23-.42C8.45 2.2 8.82 2.2 12 2.2m0 2.16c-3.14 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.17-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4-1.24-.06-1.6-.07-4.74-.07m0 3.67a5.97 5.97 0 1 1 0 11.94 5.97 5.97 0 0 1 0-11.94m0 2.16a3.81 3.81 0 1 0 0 7.62 3.81 3.81 0 0 0 0-7.62m6.24-3.9a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8"/></svg>
         </a>
       </div>
       <p class="foot-note">Enlaces pendientes de configurar con las URLs reales.</p>
@@ -669,13 +788,12 @@
 <!-- ================================================================ FAB WHATSAPP -->
 <a class="wa-fab" href="https://wa.me/56979041612" target="_blank" rel="noopener"
    data-wa="Hola, quiero cotizar mi plan de Isapre." data-wa-lugar="fab" aria-label="Escríbenos por WhatsApp">
-  <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3"/></svg>
   <span>WhatsApp</span>
 </a>
 
 <!-- ================================================================ ANALYTICS -->
-<!-- Pixel de Meta (Facebook) de tu hermana: mide visitas y conversiones.
-     Si no quieres tracking, borra todo este bloque. -->
+<!-- Pixel de Meta (Facebook) de tu hermana: mide visitas y conversiones. -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
