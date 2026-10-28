@@ -216,17 +216,23 @@ $iconoTipo = array('nota' => '📝', 'llamada' => '📞', 'whatsapp' => '💬',
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Panel interno de prospectos de Busco Tu Plan.">
 <title>Prospectos · Busco Tu Plan</title>
 <link rel="icon" href="../assets/img/favicon-64.png" type="image/png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/css/panel.css?v=20261020a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/panel.css?v=20261028a">
 </head>
 <body class="panel-body">
 
 <header class="panel-top">
   <div class="panel-top-in">
     <a class="panel-brand" href="leads.php">
-      <img src="../assets/img/logo-icon.webp" alt="" width="40" height="40">
+      <svg viewBox="0 0 52 30" aria-hidden="true">
+        <circle cx="17" cy="15" r="11.5" fill="none" stroke="#0E7A75" stroke-width="5"/>
+        <circle cx="35" cy="15" r="11.5" fill="none" stroke="#1B2B4B" stroke-width="5"/>
+      </svg>
       <span>Panel · <strong>Busco Tu Plan</strong></span>
     </a>
     <nav class="panel-acciones">
@@ -298,7 +304,7 @@ $iconoTipo = array('nota' => '📝', 'llamada' => '📞', 'whatsapp' => '💬',
               <input type="hidden" name="accion" value="estado">
               <input type="hidden" name="lead_id" value="<?= (int) $detalle['id'] ?>">
               <input type="hidden" name="filtros" value="<?= e($filtrosQS) ?>">
-              <select name="estado">
+              <select name="estado" aria-label="Estado del prospecto">
                 <?php foreach ($estados as $s): ?>
                   <option value="<?= $s ?>" <?= $detalle['estado'] === $s ? 'selected' : '' ?>><?= ucfirst($s) ?></option>
                 <?php endforeach; ?>
@@ -382,7 +388,7 @@ $iconoTipo = array('nota' => '📝', 'llamada' => '📞', 'whatsapp' => '💬',
       <input type="search" name="q" value="<?= e($q) ?>" placeholder="Buscar por nombre o teléfono…">
     </div>
     <div class="filtros-campo">
-      <select name="estado" onchange="this.form.submit()">
+      <select name="estado" aria-label="Filtrar por estado" onchange="this.form.submit()">
         <option value="">Todos los estados</option>
         <?php foreach ($estados as $s): ?>
           <option value="<?= $s ?>" <?= $estado === $s ? 'selected' : '' ?>><?= ucfirst($s) ?></option>
@@ -390,7 +396,7 @@ $iconoTipo = array('nota' => '📝', 'llamada' => '📞', 'whatsapp' => '💬',
       </select>
     </div>
     <div class="filtros-campo">
-      <select name="isapre" onchange="this.form.submit()">
+      <select name="isapre" aria-label="Filtrar por Isapre" onchange="this.form.submit()">
         <option value="">Todas las Isapres</option>
         <?php foreach ($isapresBD as $i): ?>
           <option value="<?= e($i) ?>" <?= $isapre === $i ? 'selected' : '' ?>><?= e($i) ?></option>
@@ -398,7 +404,7 @@ $iconoTipo = array('nota' => '📝', 'llamada' => '📞', 'whatsapp' => '💬',
       </select>
     </div>
     <div class="filtros-campo">
-      <select name="rango" onchange="this.form.submit()">
+      <select name="rango" aria-label="Filtrar por fecha" onchange="this.form.submit()">
         <option value="" <?= $rango === '' ? 'selected' : '' ?>>Todo el tiempo</option>
         <option value="hoy" <?= $rango === 'hoy' ? 'selected' : '' ?>>Hoy</option>
         <option value="7" <?= $rango === '7' ? 'selected' : '' ?>>Últimos 7 días</option>
@@ -426,8 +432,8 @@ $iconoTipo = array('nota' => '📝', 'llamada' => '📞', 'whatsapp' => '💬',
       <table class="tabla">
         <thead>
           <tr>
-            <th>#</th><th>Prospecto</th><th>Isapre</th><th>Necesidad</th>
-            <th>Estado</th><th>Origen</th><th>Llegó</th><th></th>
+            <th scope="col">#</th><th scope="col">Prospecto</th><th scope="col">Isapre</th><th scope="col">Necesidad</th>
+            <th scope="col">Estado</th><th scope="col">Origen</th><th scope="col">Llegó</th><th scope="col"><span class="visually-hidden">Acciones</span></th>
           </tr>
         </thead>
         <tbody>
@@ -446,7 +452,7 @@ $iconoTipo = array('nota' => '📝', 'llamada' => '📞', 'whatsapp' => '💬',
                   <input type="hidden" name="accion" value="estado">
                   <input type="hidden" name="lead_id" value="<?= (int) $l['id'] ?>">
                   <input type="hidden" name="filtros" value="<?= e($filtrosQS) ?>">
-                  <select name="estado" class="badge <?= isset($badge[$l['estado']]) ? $badge[$l['estado']] : '' ?>">
+                  <select name="estado" aria-label="Estado de <?= e($l['nombre']) ?>" class="badge <?= isset($badge[$l['estado']]) ? $badge[$l['estado']] : '' ?>">
                     <?php foreach ($estados as $s): ?>
                       <option value="<?= $s ?>" <?= $l['estado'] === $s ? 'selected' : '' ?>><?= ucfirst($s) ?></option>
                     <?php endforeach; ?>

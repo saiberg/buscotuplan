@@ -39,15 +39,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Acceso restringido al panel de prospectos de Busco Tu Plan.">
 <title>Iniciar sesión · Busco Tu Plan</title>
 <link rel="icon" href="../assets/img/favicon-64.png" type="image/png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/css/panel.css?v=20261020a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/panel.css?v=20261028a">
 </head>
 <body class="panel-body">
 
+<main>
 <div class="login-card">
-  <img class="login-logo" src="../assets/img/logo-icon.webp" alt="" width="76" height="76">
+  <svg class="login-logo" viewBox="0 0 52 30" aria-hidden="true">
+    <circle cx="17" cy="15" r="11.5" fill="none" stroke="#0E7A75" stroke-width="5"/>
+    <circle cx="35" cy="15" r="11.5" fill="none" stroke="#1B2B4B" stroke-width="5"/>
+  </svg>
   <h1>Panel de prospectos</h1>
   <p class="login-sub">Busco Tu Plan · acceso restringido</p>
 
@@ -69,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <p class="login-pie"><a href="../index.html">← Volver al sitio</a></p>
 </div>
+</main>
 
 </body>
 </html>
