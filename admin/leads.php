@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $resultado = btp_avisar_lead(array(
             'id'          => 'prueba',
             'nombre'      => 'Prueba desde el panel',
-            'telefono'    => '+56979041612',
+            'telefono'    => '+56950382768',
             'isapre'      => 'Colmena',
             'necesidad'   => 'Ahorrar en mi plan actual',
             'dispositivo' => 'movil',

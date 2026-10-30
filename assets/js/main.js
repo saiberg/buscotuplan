@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  var WA_BASE = 'https://wa.me/56979041612';
+  var WA_BASE = 'https://wa.me/56950382768';
 
   // La ruta de la API se calcula desde dónde está este archivo, no desde la
   // página. main.js vive en <sitio>/assets/js/, así que la API está dos

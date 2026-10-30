@@ -77,9 +77,9 @@ if (!function_exists('btp_conectar')) {
 // define('DB_PASS', 'la_clave_que_te_dio_hostinger');
 
 // ---------------------------------------------------------------- Contacto
-define('WHATSAPP_NUMERO', '56979041612');              // sin +, sin espacios
-define('WHATSAPP_LINK',   'https://wa.me/56979041612'); // enlace directo
-define('TELEFONO_VISIBLE', '+56 9 7904 1612');
+define('WHATSAPP_NUMERO', '56950382768');              // sin +, sin espacios
+define('WHATSAPP_LINK',   'https://wa.me/56950382768'); // enlace directo
+define('TELEFONO_VISIBLE', '+56 9 5038 2768');
 
 // ---------------------------------------------------------------- Sitio
 // URL pública. En local se auto-detecta; en producción se fija explícitamente.
